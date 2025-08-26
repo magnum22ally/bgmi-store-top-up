@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top-Up Store (Demo)</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>TOP‑UP STORE (DEMO)</h1>
+    <p class="subtitle">Practice project for learning — Not affiliated with any game</p>
+  </header>
+
+  <main>
+    <!-- Step 1: Verify -->
+    <section class="card" id="step-verify">
+      <h2>Step 1 — Verify Player ID</h2>
+      <label for="playerId" class="label">Player / Character ID</label>
+      <div class="row">
+        <input id="playerId" type="text" placeholder="Enter your numeric ID"/>
+        <button id="btnVerify">Verify</button>
+      </div>
+      <p id="verifyMsg" class="note"></p>
+    </section>
+
+    <!-- Step 2: Packages -->
+    <section class="card hidden" id="step-packages">
+      <h2>Step 2 — Select Package</h2>
+      <div class="grid">
+        <button class="pkg" data-pack="5000 UC" data-amt="1000">
+          <img src="coin.png" alt="" class="icon"/>
+          <div>
+            <div class="pkg-title">5000 UC</div>
+            <div class="pkg-price">₹1000</div>
+          </div>
+        </button>
+        <button class="pkg" data-pack="15000 UC" data-amt="2000">
+          <img src="coin.png" alt="" class="icon"/>
+          <div>
+            <div class="pkg-title">15000 UC</div>
+            <div class="pkg-price">₹2000</div>
+          </div>
+        </button>
+        <button class="pkg" data-pack="25000 UC" data-amt="2500">
+          <img src="coin.png" alt="" class="icon"/>
+          <div>
+            <div class="pkg-title">25000 UC</div>
+            <div class="pkg-price">₹2500</div>
+          </div>
+        </button>
+        <button class="pkg" data-pack="50000 UC" data-amt="4500">
+          <img src="coin.png" alt="" class="icon"/>
+          <div>
+            <div class="pkg-title">50000 UC</div>
+            <div class="pkg-price">₹4500</div>
+          </div>
+        </button>
+        <button class="pkg" data-pack="100000 UC" data-amt="5000">
+          <img src="coin.png" alt="" class="icon"/>
+          <div>
+            <div class="pkg-title">100000 UC</div>
+            <div class="pkg-price">₹5000</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- Step 3: Payment -->
+    <section class="card hidden" id="step-payment">
+      <h2>Step 3 — Payment (Demo)</h2>
+      <p class="note small">This is a demo interface for learning. Not a real payment gateway.</p>
+      <div class="payment-box">
+        <div class="summary">
+          <div><strong>Selected:</strong> <span id="selPack">—</span></div>
+          <div><strong>Amount:</strong> ₹<span id="selAmt">—</span></div>
+          <div><strong>UPI ID:</strong> <span class="mono">shariff.12@superyes</span></div>
+        </div>
+        <img src="qr.png" alt="Scan to pay (demo)" class="qr"/>
+      </div>
+      <label for="txnId" class="label">Enter UPI Reference / Transaction ID (demo)</label>
+      <div class="row">
+        <input id="txnId" type="text" placeholder="e.g., 1234567890"/>
+        <button id="btnInvoice">Generate Demo Invoice</button>
+      </div>
+      <p id="payMsg" class="note"></p>
+    </section>
+
+    <!-- Step 4: Invoice -->
+    <section class="card hidden" id="step-invoice">
+      <div class="invoice">
+        <div class="invoice-header">
+          <div>
+            <h2>DEMO INVOICE</h2>
+            <p class="muted">This receipt is for demonstration only — NOT A REAL PAYMENT</p>
+          </div>
+          <div class="stamp">DEMO</div>
+        </div>
+        <div class="invoice-grid">
+          <div>
+            <div class="label">Date</div>
+            <div id="invDate">—</div>
+          </div>
+          <div>
+            <div class="label">Invoice #</div>
+            <div id="invNo">—</div>
+          </div>
+          <div>
+            <div class="label">Player ID</div>
+            <div id="invPlayer">—</div>
+          </div>
+          <div>
+            <div class="label">Package</div>
+            <div id="invPack">—</div>
+          </div>
+          <div>
+            <div class="label">Amount</div>
+            <div>₹<span id="invAmt">—</span></div>
+          </div>
+          <div>
+            <div class="label">UPI Ref</div>
+            <div id="invTxn">—</div>
+          </div>
+        </div>
+        <hr/>
+        <p class="muted small">No goods/services are provided by this demo. For learning only.</p>
+        <button id="btnPrint">Print / Save PDF</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Top‑Up Store Demo • For educational purposes only.</p>
+  </footer>
+</body>
+</html>
