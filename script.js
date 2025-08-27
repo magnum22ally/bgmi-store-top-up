@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
       return;
     }
     playerId = id;
-    $("verifyMsg").textContent = "✅ ID verified (demo).";
+    $("verifyMsg").textContent = "✅ ID verified .";
     $("verifyMsg").style.color = "#2ecc71";
     stepPackages.classList.remove("hidden");
     stepPayment.classList.add("hidden");
@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
   $("btnInvoice").addEventListener("click", () => {
     const txn = $("txnId").value.trim();
     if(!txn){
-      $("payMsg").textContent = "❌ Enter a demo transaction / reference ID to continue.";
+      $("payMsg").textContent = "❌ Enter a transaction / reference ID to continue.";
     } else {
       $("payMsg").textContent = "";
       // fill invoice
